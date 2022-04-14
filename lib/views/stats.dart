@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'dart:math' as math;
 
-import 'package:webtest/utils/dependences.dart';
+import 'package:webtest/utils/exports.dart';
 
 class Stats extends StatefulWidget {
   const Stats({Key? key}) : super(key: key);

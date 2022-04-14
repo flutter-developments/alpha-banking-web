@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:webtest/utils/dependences.dart';
+import 'package:webtest/utils/exports.dart';
 import 'package:webtest/views/add_card.dart';
 
 class Wallet extends StatelessWidget {

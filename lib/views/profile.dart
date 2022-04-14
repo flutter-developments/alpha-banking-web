@@ -1,4 +1,4 @@
-import 'package:webtest/utils/dependences.dart';
+import 'package:webtest/utils/exports.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);

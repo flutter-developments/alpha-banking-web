@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:gap/gap.dart';
 import 'dart:math' as math;
 
-import 'package:webtest/utils/dependences.dart';
+import 'package:webtest/utils/exports.dart';
 import 'package:webtest/widgets/people_slider.dart';
 
 class SendMoney extends StatefulWidget {

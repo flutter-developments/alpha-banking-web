@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:webtest/utils/dependences.dart';
+import 'package:webtest/utils/exports.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:webtest/utils/dependences.dart';
+import 'package:webtest/utils/exports.dart';
 
 class PeopleSlider extends StatefulWidget {
   const PeopleSlider({Key? key}) : super(key: key);
