@@ -11,16 +11,18 @@ class CustomListTile extends StatelessWidget {
   final BuildContext context;
 
   const CustomListTile(
-      {Key? key, required this.icon,
-        required this.title,
-        this.callback,
-        required this.color,
-        this.isDarkMode,
-        required this.context}) : super(key: key);
+      {Key? key,
+      required this.icon,
+      required this.title,
+      this.callback,
+      required this.color,
+      this.isDarkMode,
+      required this.context})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
- 
+    final ViewModel vm = context.watch<ViewModel>();
     return ListTile(
       contentPadding: const EdgeInsets.symmetric(vertical: 2),
       leading: Container(
@@ -39,18 +41,19 @@ class CustomListTile extends StatelessWidget {
           style: TextStyle(fontSize: 17, color: Repository.textColor(context))),
       trailing: isDarkMode == true
           ? CupertinoSwitch(
-        thumbColor: Styles.blueColor,
-        activeColor: Repository.activeColor(context),
-        trackColor: Repository.activeColor(context),
-        value: LocatorService.vm().isDark,
-        onChanged: (v) {
-         LocatorService.vm().setPref(v);
-         LocatorService.vm().getPref();
-         LocatorService.vm().setToDark();
-        },
-      )
+              thumbColor: Styles.blueColor,
+              activeColor: Repository.activeColor(context),
+              trackColor: Repository.activeColor(context),
+              value: vm.isDark,
+              onChanged: (v) {
+                vm.setPref(v);
+                vm.getPref();
+                vm.setToDark();
+              },
+            )
           : Icon(CupertinoIcons.arrow_right,
-          color: Repository.textColor(context)),
+              color: Repository.textColor(context)),
       onTap: callback,
-    );  }
+    );
+  }
 }
